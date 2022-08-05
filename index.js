@@ -10,7 +10,7 @@ app.get('/disallow', (req, res)=>{
 })
 
 app.get('/', (req, res)=>{
-    res.send('Main Page')
+    res.sendFile(path.join(__dirname+'/aHtml.html'))
 })
 
 app.get('/redirect', (req, res)=>{

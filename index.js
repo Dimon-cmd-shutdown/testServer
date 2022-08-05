@@ -10,19 +10,19 @@ app.get('/disallow', (req, res)=>{
 })
 
 app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname+'/aHtml.html'))
+    res.status(200).sendFile(path.join(__dirname+'/aHtml.html'))
 })
 
 app.get('/redirect', (req, res)=>{
-    res.redirect('/redirected_page')
+    res.status(302).redirect('/redirected_page')
 })
 
 app.get('/redirected_page', (req, res)=>{
-    res.send('Redirected successfully')
+    res.status(200).send('Redirected successfully')
 })
 
 app.get('/get_html', (req, res)=>{
-    res.sendFile(path.join(__dirname+'/index.html'))
+    res.status(200).sendFile(path.join(__dirname+'/index.html'))
 })
 
 app.get('/200', (req, res)=>{

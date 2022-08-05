@@ -9,6 +9,10 @@ app.get('/disallow', (req, res)=>{
     res.status(200).send('Disallow')
 })
 
+app.get('/', (req, res)=>{
+    res.send('Main Page')
+})
+
 app.get('/redirect', (req, res)=>{
     res.redirect('/redirected_page')
 })
